@@ -59,3 +59,11 @@ sysinfo.txt
 crashlytics-build.properties
 
 *.vsconfig
+
+/ProjectSettings/
+/Packages/
+/UserSettings/
+/.idea/
+Assets/AssetBundleCollectorSetting.asset
+
+Assets/AssetBundleCollectorSetting.asset.meta

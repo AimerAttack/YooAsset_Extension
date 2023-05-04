@@ -309,6 +309,8 @@ namespace YooAsset.Editor
 			_collectorContainer.visible = false;
 
 			FillPackageViewData();
+			
+			EventModule.BroadCast(Event.Undo);
 		}
 		private void FixBtn_clicked()
 		{
@@ -848,6 +850,8 @@ namespace YooAsset.Editor
 			Undo.RecordObject(AssetBundleCollectorSettingData.Setting, "YooAsset.AssetBundleCollectorWindow RemoveCollector");
 			AssetBundleCollectorSettingData.RemoveCollector(selectGroup, selectCollector);
 			FillCollectorViewData();
+			
+			EventModule.BroadCast(Event.RemoveCollector);
 		}
 
 		private int GetCollectorTypeIndex(string typeName)
